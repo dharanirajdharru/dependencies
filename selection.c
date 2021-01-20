@@ -19,7 +19,15 @@ for(i=0;i<n;i++)
 
 void selectionsort(int a[],int s)
 {
-int i,j,t;
+int i,j,t,a1[s];
+for(i=0;i<s;i++)
+{
+ a1[i]=a[i];
+}
+for(i=0;i<s;i++)
+{
+ a[i]=a1[i+1];
+}
 for(i=0;i<=s-1;i++)
 {
  for(j=i+1;j<=s;j++)

@@ -1,24 +1,22 @@
 #include<stdio.h>
 #include<time.h>
+#include<stdlib.h>
 void insertionsort(int a[],int );
 void selectionsort(int a[],int );
 void bubblesort(int a[],int );
 void divide(int a[],int ,int);
 void quicksort(int a[],int ,int);
 
-int main()
+int main(int argc,char *argv[])
 {
 clock_t t1,t2,t3,t4,t5;
-int i,n,a[20];
-printf("\nenter the size of an array:");
-scanf("%d",&n);
+int i,n=argc,a[n];
+//printf("\nenter the size of an array:");
+//scanf("%d",&n);
 int c[n],d[n];
-printf("\nenter array elements:");
-for(i=0;i<n;i++)
- scanf("%d",&a[i]);
-for(i=0;i<n;i++)
+for(i=1;i<n;i++)
 {
-  c[i]=d[i]=a[i];
+ c[i]=d[i]=a[i]=atoi(argv[i]);
 }
 t1 = clock();
 selectionsort(a,n);
